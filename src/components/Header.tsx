@@ -17,6 +17,7 @@ function Header() {
                         <Link to="/">Projects</Link>
                         <Link to="/">Expertise</Link>
                     </div>
+                    <button className="getintouch">Get in touch</button>
                 </div>
             </nav>
         </div>
