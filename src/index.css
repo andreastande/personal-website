@@ -1,12 +1,11 @@
 body {
-  font-family: inter;
-  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
   background-color: #040615;
   margin: 0;
 }
 
 p {
-  color: white;
+  color: #ced6de;
 }
 
 h1 {

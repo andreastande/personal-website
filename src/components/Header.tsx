@@ -5,18 +5,18 @@ import '../assets/Header.css'
 
 function Header() {
 
-    return (
+    return ( 
         <div className="header">
             <div className="homepage">
                 <Link to="/"><img src={A_logo} width="60vh"></img></Link>
             </div>
             <div className="sections">
-                <Link to="/">About</Link>
-                <Link to="/">Projects</Link>
-                <Link to="/">Expertise</Link>
+                <Link to="/about">About</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/expertise">Expertise</Link>
             </div>
             <div className="getintouchWrapper">
-                <button className="getintouch">Get in touch</button>   
+                <Link to="/contact"><button className="getintouch">Get in touch</button></Link>
             </div>
         </div>
     )
