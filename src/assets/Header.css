@@ -4,7 +4,8 @@
     align-items: center;
     height: 80px;
     width: 100%;
-    padding-top: 8px
+    padding-top: 8px;
+    position: relative;
 }
 
 
@@ -68,4 +69,31 @@
     line-height: 1.2em;
     text-align: start;
     color: #363738;
+}
+
+.backgroundContainer {
+    flex: 0 0 auto;
+    height: 320px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: perspective(1200px);
+    z-index: 0;
+    opacity: 1;
+}
+
+.backgroundHeader {
+    place-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    gap: 0px;
+    height: 100%;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    background: radial-gradient(80.1% 100% at 50% 0%, rgba(38, 140, 245, 0.25) 0%, rgba(38, 140, 245, 0) 100%);
 }
