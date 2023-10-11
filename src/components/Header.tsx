@@ -8,8 +8,8 @@ function Header() {
     return ( 
         <>
             <div className="header">
-                <div className="homepage">
-                    <Link to="/"><img src={A_logo} width="60vh"></img></Link>
+                <div className="logo">
+                    <Link to="/"><img src={A_logo} width="70vw"></img></Link>
                 </div>
                 <div className="sections">
                     <Link to="/about">About</Link>
