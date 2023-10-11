@@ -71,6 +71,10 @@
     color: #363738;
 }
 
+.getintouch:hover {
+    cursor: pointer;
+}
+
 .backgroundContainer {
     flex: 0 0 auto;
     height: 320px;
