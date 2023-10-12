@@ -1,9 +1,17 @@
 import { Link } from 'react-router-dom';
 import A_logo from '../assets/A_logo.png'
 import '../assets/Header.css'
+import { useState, useEffect } from 'react';
 
 
 function Header() {
+
+    const [fadeIn, setFadeIn] = useState(false);
+    const [isHomepage] = useState(window.location.pathname === '/');
+
+    useEffect(() => {
+        setFadeIn(true);
+      }, []);
 
     return ( 
         <>
@@ -22,7 +30,9 @@ function Header() {
             </div>
             <div className="backgroundContainer">
                 <div className="backgroundGrid" tabIndex={0} style={{display: 'contents'}}>
-                    <div className="backgroundHeader"></div>
+                    {!isHomepage ? (
+                        <div className={`backgroundHeader-transition ${fadeIn ? 'active' : ''}`}></div>
+                    ) : <div className="backgroundHeader-nontransition"></div>}
                 </div>
             </div>
         </>
