@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import A_logo from '../assets/A_logo.png'
+import A_logo from '../assets/images/A_logo.png'
 import '../assets/Header.css'
 import { useState, useEffect } from 'react';
+import Hamburger_icon from '../assets/images/Hamburger_icon.png'
 
 
 function Header() {
@@ -26,6 +27,9 @@ function Header() {
                 </div>
                 <div className="getintouchWrapper">
                     <Link to="/contact"><button className="getintouch">Get in touch</button></Link>
+                </div>
+                <div className="burger-menu">
+                    <img className="burger-icon" src={Hamburger_icon} width="50vw"></img>
                 </div>
             </div>
             <div className="backgroundContainer">

@@ -76,6 +76,35 @@
     cursor: pointer;
 }
 
+.burger-menu {
+    display: none;
+}
+
+@media (max-width: 900px) {
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        justify-content: space-between;
+        padding-left: 2rem;
+    }
+
+    .sections {
+        display: none;
+    }
+
+    .getintouchWrapper {
+        display: none
+    }
+
+    .burger-menu {
+        display: block;
+        padding-right: 2rem;
+    }
+}
+
 .backgroundContainer {
     flex: 0 0 auto;
     height: 320px;
