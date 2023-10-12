@@ -28,9 +28,30 @@
     width: 50%;
 }
 
+.sections.menu-open {
+    display: flex;
+    flex-direction: column;
+    top: 5.5rem;
+    position: fixed;
+    width: 100%;
+}
+
+.sections.menu-open .child-section {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    backdrop-filter: blur(32px);
+    background-color: rgba(4, 6, 21, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .sections a {
+    text-decoration: none;
+}
+
+.sections h1 {
     position: relative;
-    display: inline-block;
+    display: flex;
     padding-bottom: 1.5px;
     transition: transform 0.8s ease;
     font-size: 22px;
@@ -41,7 +62,7 @@
     margin: 0px 10px
 }
 
-.sections a:after {
+.sections h1:after {
     content: "";
     position: absolute;
     left: 0;
@@ -54,17 +75,37 @@
     transform-origin: center;
 }
 
-.sections a:hover, .sections a:focus {
+.sections h1:hover, .sections a:focus {
     transform: scaleX(1);
 }
 
-.sections a:hover:after {
+.sections h1:hover:after {
     transform: scaleX(1);
 }
 .getintouchWrapper {
     display: flex;
     justify-content: flex-start;
     width: 25%;
+}
+
+.getintouchWrapper.menu-open {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 20.75rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.getintouchWrapper.menu-open .child-button {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0px 25px 0px 25px;
+}
+
+.getintouchWrapper.menu-open a{
+    text-decoration: none; 
 }
 
 .getintouch {
@@ -76,6 +117,11 @@
     text-align: start;
     color: #363738;
     border: 1px solid transparent;
+}
+
+.getintouch.menu-open {
+    width: 100%;
+    text-align: center;
 }
 
 .getintouch:hover {
@@ -109,6 +155,15 @@
         display: block;
         padding-right: 2rem;
     }
+}
+
+.backdrop-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 412px;
+    backdrop-filter: blur(32px);
 }
 
 .backgroundContainer {

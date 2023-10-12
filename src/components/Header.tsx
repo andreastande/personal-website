@@ -26,18 +26,27 @@ function Header() {
                 <div className="logo">
                     <Link to="/"><img src={A_logo} width="70vw"></img></Link>
                 </div>
-                <div className="sections">
-                    <Link to="/about">About</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/expertise">Expertise</Link>
+                <div className={`sections ${menuOpen ? 'menu-open' : ''}`}>
+                    <Link to="/about" className="child-section">
+                        <h1>About</h1>
+                    </Link>
+                    <Link to="/projects" className="child-section">
+                        <h1>Projects</h1>
+                    </Link>
+                    <Link to="/expertise" className="child-section">
+                        <h1>Expertise</h1>
+                    </Link>
                 </div>
-                <div className="getintouchWrapper">
-                    <Link to="/contact"><button className="getintouch">Get in touch</button></Link>
+                <div className={`getintouchWrapper ${menuOpen ? 'menu-open' : ''}`}>
+                    <Link to="/contact" className="child-button"><button className={`getintouch ${menuOpen ? 'menu-open' : ''}`}>Get in touch</button></Link>
                 </div>
                 <div className="burger-menu" onClick={toggleMenu}>
                     <img className="burger-icon" src={!menuOpen ? Hamburger_icon : Close_Hamburger_icon} width="50vw"></img>
                 </div>
             </div>
+            {menuOpen && (
+                <div className="backdrop-blur"></div>
+            )}
             <div className="backgroundContainer">
                 <div className="backgroundGrid" tabIndex={0} style={{display: 'contents'}}>
                     <div className={`backgroundHeader ${isHomepage ? 'homepage' : 'otherpage'} ${fadeIn && !isHomepage  ? 'active' : ''}`}></div>
