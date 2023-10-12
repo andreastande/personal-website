@@ -30,9 +30,7 @@ function Header() {
             </div>
             <div className="backgroundContainer">
                 <div className="backgroundGrid" tabIndex={0} style={{display: 'contents'}}>
-                    {!isHomepage ? (
-                        <div className={`backgroundHeader-transition ${fadeIn ? 'active' : ''}`}></div>
-                    ) : <div className="backgroundHeader-nontransition"></div>}
+                    <div className={`backgroundHeader ${isHomepage ? 'homepage' : 'otherpage'} ${fadeIn && !isHomepage  ? 'active' : ''}`}></div>
                 </div>
             </div>
         </>

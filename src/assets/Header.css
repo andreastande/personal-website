@@ -87,7 +87,7 @@
     z-index: 0; 
 }
 
-.backgroundHeader-transition {
+.backgroundHeader {
     place-content: center;
     align-items: center;
     display: flex;
@@ -98,31 +98,19 @@
     padding: 0px;
     position: relative;
     width: 100%;
-    opacity: 0;
     transition: opacity 1s;
     background: radial-gradient(80.1% 100% at 50% 0%, rgba(38, 140, 245, 0.25) 0%, rgba(38, 140, 245, 0) 100%);
     transition-delay: 50ms;
 }
 
-.backgroundHeader-nontransition {
-    place-content: center;
-    align-items: center;
-    display: flex;
-    flex-flow: column;
-    gap: 0px;
-    height: 100%;
-    overflow: hidden;
-    padding: 0px;
-    position: relative;
-    width: 100%;
+.backgroundHeader.homepage {
     opacity: 1;
-    transition: opacity 1s;
-    background: radial-gradient(80.1% 100% at 50% 0%, rgba(38, 140, 245, 0.25) 0%, rgba(38, 140, 245, 0) 100%);
-    transition-delay: 50ms;
 }
 
+.backgroundHeader.otherpage {
+    opacity: 0;
+}
 
-
-.backgroundHeader-transition.active {
+.backgroundHeader.otherpage.active {
     opacity: 1;
 }
