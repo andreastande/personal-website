@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# Personlig nettside
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dette er en nettside jeg utvikler, som har som hensikt å fortelle litt om hvem jeg er, hvilke prosjekter jeg har gjort og hva min ekspertise er. **Nettsiden er under utvikling, og er langt fra ferdig.** Kan være nyttig for en potensiell arbeidsgiver senere.
 
-Currently, two official plugins are available:
+## Bygging
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Prosjektet er konfigurert til å bygge med npm. Ved å kjøre `npm install` i **personal-website** vil man forberede prosjektet for å kunne kjøre.
 
-## Expanding the ESLint configuration
+## Kjøring av applikasjonen
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Etter man har utført en av kommandoen under **[Bygging](readme.md#bygging)** kan man kjøre applikasjonen lokalt.
 
-- Configure the top-level `parserOptions` property like this:
+- #### Kjøring lokalt
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Man kan kjøre applikasjonen med lokal lagring ved å navigere til **personal-website** og kjøre `npm run dev`. Da vil appen kjøres på en localhost med en lenke som dukker opp i terminalen.
