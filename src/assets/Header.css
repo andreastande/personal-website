@@ -105,7 +105,8 @@
 }
 
 .getintouchWrapper.menu-open a{
-    text-decoration: none; 
+    text-decoration: none;
+    width: 100%;
 }
 
 .getintouch {
@@ -130,6 +131,10 @@
 
 .burger-menu {
     display: none;
+}
+
+.burger-icon {
+    cursor: pointer;
 }
 
 @media (max-width: 900px) {

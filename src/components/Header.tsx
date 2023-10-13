@@ -45,18 +45,28 @@ function Header() {
                     <Link to="/"><img src={A_logo} width="70vw"></img></Link>
                 </div>
                 <div className={`sections ${menuOpen ? 'menu-open' : ''}`}>
-                    <Link to="/about" className="child-section">
-                        <h1>About</h1>
-                    </Link>
-                    <Link to="/projects" className="child-section">
-                        <h1>Projects</h1>
-                    </Link>
-                    <Link to="/expertise" className="child-section">
-                        <h1>Expertise</h1>
-                    </Link>
+                    <div className="child-section">
+                        <Link to="/about">
+                            <h1>About</h1>
+                        </Link>
+                    </div>
+                    <div className="child-section">
+                        <Link to="/projects">
+                            <h1>Projects</h1>
+                        </Link>
+                    </div>
+                    <div className="child-section">
+                        <Link to="/expertise">
+                            <h1>Expertise</h1>
+                        </Link>
+                    </div>
                 </div>
                 <div className={`getintouchWrapper ${menuOpen ? 'menu-open' : ''}`}>
-                    <Link to="/contact" className="child-button"><button className={`getintouch ${menuOpen ? 'menu-open' : ''}`}>Get in touch</button></Link>
+                    <div className="child-button">
+                        <Link to="/contact">
+                            <button className={`getintouch ${menuOpen ? 'menu-open' : ''}`}>Get in touch</button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="burger-menu" onClick={toggleMenu}>
                     <img className="burger-icon" src={!menuOpen ? Hamburger_icon : Close_Hamburger_icon} width="50vw"></img>
