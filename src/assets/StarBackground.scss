@@ -1,0 +1,93 @@
+@use 'sass:math';
+
+.circle-big-container {
+  flex: 0 0 auto;
+  height: 320px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+  animation: fadeInFromRight 1.5s ease-in forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeInFromRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.circle-container {
+  $particleWidth: 4px;
+  $particleNum: 300;
+  $particleColor: hsl(180, 100%, 80%);
+
+  position: absolute;
+  transform: translateY(-10vh);
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(
+      hsl(180, 100%, 80%),
+      hsl(180, 100%, 80%) 10%,
+      hsla(180, 100%, 80%, 0) 56%
+    );
+  }
+
+  @for $i from 1 through $particleNum {
+    &:nth-child(#{$i}) {
+      $startPositionY: random(80);
+      $framesName: "move-frames-" + $i;
+      $randomNumber: random(3);
+      $moveDuration: null;
+      $circleSize: math.random(math.div($particleWidth, 1px));
+
+      width: $circleSize + px;
+      height: $circleSize + px;
+
+
+      @if $randomNumber == 0 {
+        $moveDuration: 2000s;
+      } @else if $randomNumber == 1 {
+        $moveDuration: 300s;
+      } @else {
+        $moveDuration: 260s;
+      }
+
+      
+      animation-name: #{$framesName};
+      animation-duration: $moveDuration;
+      animation-delay: 2s;
+
+      @keyframes #{$framesName} {
+        from {
+          transform: translate3d(
+            #{random(99) + vw},
+            #{$startPositionY + vh},
+            0
+          );
+        }
+        
+        to {
+          transform: translate3d(
+            #{-50 + vw},
+            #{$startPositionY + random(4) - random(4) + vh},
+            0
+          );
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import StarBackground from '../components/StarBackground';
 
 const Homepage = () => {
     return (
@@ -11,6 +12,7 @@ const Homepage = () => {
                 <button>
                     <Link to="/about">Go to Aboutpage</Link>
                 </button>
+                <StarBackground />
             </main>
         </div>
     );
