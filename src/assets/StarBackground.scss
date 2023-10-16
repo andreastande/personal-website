@@ -50,7 +50,7 @@
     &:nth-child(#{$i}) {
       $startPositionY: random(80);
       $framesName: "move-frames-" + $i;
-      $randomNumber: random(3);
+      $randomNumber: random(4);
       $moveDuration: null;
       $circleSize: math.random(math.div($particleWidth, 1px));
 
@@ -58,9 +58,9 @@
       height: $circleSize + px;
 
 
-      @if $randomNumber == 0 {
+      @if $randomNumber == 1 {
         $moveDuration: 2000s;
-      } @else if $randomNumber == 1 {
+      } @else if $randomNumber == 2 {
         $moveDuration: 300s;
       } @else {
         $moveDuration: 260s;
