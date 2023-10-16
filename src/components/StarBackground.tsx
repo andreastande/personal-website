@@ -99,7 +99,7 @@ const StarBackground = () => {
                 <Particles id="stars2" init={particlesInit} options={{
                     "particles": {
                         "number": {
-                            "value": 180,
+                            "value": 200,
                             "density": {
                                 "enable": true,
                                 "value_area": 800
@@ -176,7 +176,7 @@ const StarBackground = () => {
                     <Particles id="stars3" init={particlesInit} options={{
                         "particles": {
                             "number": {
-                                "value": 180,
+                                "value": 150,
                                 "density": {
                                     "enable": true,
                                     "value_area": 800
