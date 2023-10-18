@@ -39,7 +39,7 @@ function Header() {
     }
 
     return ( 
-        <>
+        <header>
             <div className={`header ${menuOpen || hasScrolled ? 'menu-open' : ''}`}>
                 <div className="logo">
                     <Link to="/"><img src={A_logo} width="70vw"></img></Link>
@@ -83,7 +83,7 @@ function Header() {
                     <div className={`backgroundHeader ${isHomepage ? 'homepage' : 'otherpage'} ${fadeIn && !isHomepage  ? 'active' : ''}`}></div>
                 </div>
             </div>
-        </>
+        </header>
     )
 }
 
