@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import A_logo from '../assets/images/A_logo.png'
 import '../assets/Header.css'
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Hamburger_icon from '../assets/images/Hamburger_icon.png'
 import Close_Hamburger_icon from '../assets/images/Close_Hamburger_icon.png'
 
@@ -12,17 +12,15 @@ function Header() {
     const [isHomepage] = useState(window.location.pathname === '/');
     const [menuOpen, setMenuOpen] = useState(false);
     const [hasScrolled, setHasScrolled] = useState(false);
-    const hasScrolledRef = useRef(false);
+    
 
     useEffect(() => {
         setFadeIn(true);
         
         function handleScroll() {
-            if (window.scrollY > 0) {
-                hasScrolledRef.current = true;
+            if (window.scrollY > 0) {  
                 setHasScrolled(true);
             } else {
-                hasScrolledRef.current = false;
                 setHasScrolled(false);
             }
         }
