@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import StarBackground from '../components/StarBackground';
 import '../assets/Homepage.css'
@@ -9,9 +8,11 @@ const Homepage = () => {
             <Header />
             <main className="mainContent">
                 <div className="landing-section">
-                    <h1 className="page-title">Velkommen til min hjemside!</h1>
+                    <h1 className="page-title">Velkommen til min nettside!</h1>
+                    <p className="subheading">
+                        Her kan du få vite mer om meg, og oppdage prosjekter jeg har bidratt i eller utviklet selv. 
+                    </p>
                 </div>
-                <p>This is a basic homepage component.</p>
                 <StarBackground />
             </main>
         </div>

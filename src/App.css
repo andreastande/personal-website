@@ -1,14 +1,28 @@
 .mainContent {
     padding-top: 88px;
+    animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+      transform: translateY(5px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
 }
 
 .page-title {
     background: linear-gradient(276deg, var(--token-694aa065-ce12-40ea-bf52-839e47967525, rgb(127, 182, 213)) 0%, rgb(255, 255, 255) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 70px;
     text-align: center;
     width: 40vw;
+    margin: 0;
 }
 
 @media (max-width: 1210px) {
@@ -31,7 +45,7 @@
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 370px) {
     .page-title {
         word-break: break-all;
     }
