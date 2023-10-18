@@ -1,3 +1,23 @@
 .mainContent {
     padding-top: 88px;
 }
+
+.page-title {
+    background: linear-gradient(276deg, var(--token-694aa065-ce12-40ea-bf52-839e47967525, rgb(127, 182, 213)) 0%, rgb(255, 255, 255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    width: fit-content;
+}
+
+@media (max-width: 1210px) {
+    .page-title {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 915px) {
+    .page-title {
+        font-size: 40px;
+    }
+}

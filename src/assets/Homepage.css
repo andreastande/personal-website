@@ -1,0 +1,8 @@
+.landing-section {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    flex-direction: column;
+}
