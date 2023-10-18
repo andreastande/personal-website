@@ -9,7 +9,7 @@ const Homepage = () => {
             <Header />
             <main className="mainContent">
                 <div className="landing-section">
-                    <h1 className="page-title">Velkommen til min hjemside</h1>
+                    <h1 className="page-title">Velkommen til min hjemside!</h1>
                 </div>
                 <p>This is a basic homepage component.</p>
                 <StarBackground />
