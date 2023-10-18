@@ -47,24 +47,24 @@ function Header() {
                 <div className={`sections ${menuOpen ? 'menu-open' : ''}`}>
                     <div className="child-section">
                         <Link to="/about">
-                            <h1>About</h1>
+                            <h1>Om meg</h1>
                         </Link>
                     </div>
                     <div className="child-section">
                         <Link to="/projects">
-                            <h1>Projects</h1>
+                            <h1>Prosjekter</h1>
                         </Link>
                     </div>
                     <div className="child-section">
                         <Link to="/expertise">
-                            <h1>Expertise</h1>
+                            <h1>Ekspertise</h1>
                         </Link>
                     </div>
                 </div>
                 <div className={`getintouchWrapper ${menuOpen ? 'menu-open' : ''}`}>
                     <div className="child-button">
                         <Link to="/contact">
-                            <button className={`getintouch ${menuOpen ? 'menu-open' : ''}`}>Get in touch</button>
+                            <button className={`getintouch ${menuOpen ? 'menu-open' : ''}`}>Ta kontakt</button>
                         </Link>
                     </div>
                 </div>
