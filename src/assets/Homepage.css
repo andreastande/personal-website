@@ -39,6 +39,9 @@
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     box-shadow: rgba(63, 92, 131, 0.5) 0px -1px 15px 0px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    border-width: 1px;
     /*
     box-shadow: rgba(97, 98, 99, 0.5) 0px -1px 16px 0px;
     */
