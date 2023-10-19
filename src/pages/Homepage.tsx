@@ -52,11 +52,11 @@ const Homepage = () => {
                             </div>
                         </Link>
                         <Link to="/projects" className="grid-row-span-1">
-                            <article className="grid-box-2" onMouseOver={() => showArrow(2)}>
+                            <article className="grid-box-2" onMouseOver={() => showArrow(2, true)} onMouseOut={() => showArrow(2, false)}>
                             
                             </article>
                         </Link>
-                        <Link to="/expertise" className="grid-row-span-1" onMouseOver={() => showArrow(3)}>
+                        <Link to="/expertise" className="grid-row-span-1" onMouseOver={() => showArrow(3, true)} onMouseOut={() => showArrow(3, false)}>
                             <article className="grid-box-3">
                             
                             </article>
