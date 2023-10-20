@@ -11,21 +11,6 @@ const Homepage = () => {
     const [showArrow2, setShowArrow2] = useState(false);
     const [showArrow3, setShowArrow3] = useState(false);
 
-
-    const showArrow = (number: number, bool: boolean) => {
-        switch (number) {
-            case 1:
-                setShowArrow1(bool)
-                break
-            case 2:
-                setShowArrow2(bool)
-                break
-            case 3:
-                setShowArrow3(bool)
-                break
-        }
-    }
-
     return (
         <div>
             <Header />
@@ -38,7 +23,7 @@ const Homepage = () => {
                     <section className="grid-container">
                         <Link to="/about" className="grid-row-span-2">
                             <div style={{position: 'relative'}}>
-                                <article className="grid-box-1" onMouseOver={() => showArrow(1, true)} onMouseOut={() => showArrow(1, false)}>
+                                <article className="grid-box-1" onMouseOver={() => setShowArrow1(true)} onMouseOut={() => setShowArrow1(false)}>
                                     <img src={ProfilePicture}></img>
                                     <p>Mitt navn er Andreas Tande, jeg er 22 år og studerer Datateknologi ved NTNU. For øyeblikket går jeg mitt tredje år på dette studiet.</p>
                                     <p id="additional-text-1">Klikk for å lese mer!</p>
@@ -52,13 +37,13 @@ const Homepage = () => {
                             </div>
                         </Link>
                         <Link to="/projects" className="grid-row-span-1">
-                            <article className="grid-box-2" onMouseOver={() => showArrow(2, true)} onMouseOut={() => showArrow(2, false)}>
+                            <article className="grid-box-2" onMouseOver={() => setShowArrow2(true)} onMouseOut={() => setShowArrow2(false)}>
                             
                             </article>
                         </Link>
-                        <Link to="/expertise" className="grid-row-span-1" onMouseOver={() => showArrow(3, true)} onMouseOut={() => showArrow(3, false)}>
-                            <article className="grid-box-3">
-                            
+                        <Link to="/expertise" className="grid-row-span-1">
+                            <article className="grid-box-3" onMouseOver={() => setShowArrow3(true)} onMouseOut={() => setShowArrow3(false)}>
+                                
                             </article>
                         </Link>
                     </section>
