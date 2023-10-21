@@ -25,7 +25,7 @@ const Homepage = () => {
                             <div style={{position: 'relative'}}>
                                 <article className="grid-box-1" /* onMouseOver={() => setShowArrow1(true)} onMouseOut={() => setShowArrow1(false)} */ >
                                     <img src={ProfilePicture}></img>
-                                    <p>Mitt navn er Andreas Tande, jeg er 22 år og studerer Datateknologi ved NTNU. For øyeblikket går jeg mitt tredje år på dette studiet.</p>
+                                    <p>Mitt navn er Andreas Tande, jeg er 22 år og studerer Datateknologi ved NTNU. For øyeblikket går jeg mitt tredje år her.</p>
                                     <p id="additional-text-1">Klikk for å lese mer!</p>
                                 </article>
                                 {/* 
