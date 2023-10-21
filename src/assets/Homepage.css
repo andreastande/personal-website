@@ -1,24 +1,31 @@
 .landing-section {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 15vh;
-    flex-direction: column; 
+    flex-direction: column;
+    height: calc(100vh - 88px - 15vh);
+}
+
+.landing-section .titleWrapper {
+    height: 22%;
 }
 
 @media (max-width: 550px) {
     .landing-section {
         margin-top: 10vh;
+        height: calc(100vh - 88px - 10vh);
     }
 }
 
 .subheading {
-    margin-top: 25px;
+    margin-top: 1.5rem;
     font-size: 22px;
     width: 600px;
     text-align: center;
     line-height: 2.2rem;
+    height: 15%;
+    margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
@@ -45,12 +52,20 @@
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+    height: 63%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 40%;
+}
+
+@media (max-width: 550px) {
+    .grid-container {
+        width: 85%;
+    }
 }
 
 .grid-row-span-2 {
     grid-row: span 2;
-    width: 250px;
-    height: 100%;
 }
 
 .grid-container a {
@@ -63,6 +78,7 @@
     border-style: solid;
     border-width: 1px;
     text-align: center;
+    width: 100%;
 }
 
 .grid-container a:hover {
@@ -93,10 +109,6 @@
     margin-top: 0.6rem;
 }
 
-.grid-row-span-1 {
-    width: 250px;
-    height: 100%;
-}
 
 @media (max-width: 640px) {
     .grid-container p {
@@ -134,15 +146,14 @@
     }
 }
 
+@media (max-width: 915px) and (min-width: 551px) {
+    .grid-container {
+        width: 70%;
+    }
+}
+
 @media (max-width: 420px) {
-    .grid-row-span-1 {
-        width: 43vw;
-    }
-
-    .grid-row-span-2 {
-        width: 43vw;
-    }
-
+    
     .grid-container {
         gap: 1rem;
     }

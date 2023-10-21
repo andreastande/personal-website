@@ -16,7 +16,10 @@ const Homepage = () => {
             <Header />
             <main className="mainContent">
                 <div className="landing-section">
-                    <h1 className="page-title">Velkommen til min nettside!</h1>
+                    <div className="titleWrapper" style={{display: 'flex', alignItems: 'center'}}>
+                        <h1 className="page-title">Velkommen til min nettside!</h1>
+                    </div>
+                    
                     <p className="subheading">
                         Her kan du få vite mer om meg, og oppdage prosjekter jeg har bidratt i eller utviklet selv. 
                     </p>
