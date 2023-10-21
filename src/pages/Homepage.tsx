@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ProfilePicture from '../assets/images/Profilbilde.png'
 import ArrowRight from '../assets/images/arrow-right.png'
 import PointerRight from '../assets/images/cursor-pointer-right.png'
+import PointerLeft from '../assets/images/cursor-pointer-left.png'
 
 const HomepageGrid = () => {
     const [showArrow1, setShowArrow1] = useState(false);
@@ -14,6 +15,7 @@ const HomepageGrid = () => {
 
     return (
         <section className="grid-container">
+            
             <Link to="/about" className="grid-row-span-2">
                 <div style={{position: 'relative'}}>
                     <article className="grid-box-1" onMouseOver={() => setShowArrow1(true)} onMouseOut={() => setShowArrow1(false)}>
@@ -24,23 +26,38 @@ const HomepageGrid = () => {
                     {showArrow1 && (
                         <div className="showMore" style={{position: 'absolute', left: '-40px', bottom: '-40px'}}>
                             <img src={PointerRight} width="60px"></img>
-                            
                         </div>
                     )}
                     
                 </div>
             </Link>
-            
+
             <Link to="/projects" className="grid-row-span-1">
-                <article className="grid-box-2" /* onMouseOver={() => setShowArrow2(true)} onMouseOut={() => setShowArrow2(false)} */ >
-                
-                </article>
-            </Link>
-            <Link to="/expertise" className="grid-row-span-1">
-                <article className="grid-box-3" /* onMouseOver={() => setShowArrow3(true)} onMouseOut={() => setShowArrow3(false)} */ >
+                <div style={{position: 'relative'}}>
+                    <article className="grid-box-2" onMouseOver={() => setShowArrow2(true)} onMouseOut={() => setShowArrow2(false)}>
                     
-                </article>
+                    </article>
+                    {showArrow2 && (
+                        <div className="showMore" style={{position: 'absolute'}}>
+                            <img src={PointerLeft} width="60px"></img>
+                        </div>
+                    )}
+                </div>
             </Link>
+
+            <Link to="/expertise" className="grid-row-span-1">
+                <div style={{position: 'relative'}}>
+                    <article className="grid-box-3" onMouseOver={() => setShowArrow3(true)} onMouseOut={() => setShowArrow3(false)}>
+                        
+                    </article>
+                    {showArrow3 && (
+                        <div className="showMore" style={{position: 'absolute'}}>
+                            <img src={PointerLeft} width="60px"></img>
+                        </div>
+                    )}
+                </div>
+            </Link>
+
         </section>
     )
 }
